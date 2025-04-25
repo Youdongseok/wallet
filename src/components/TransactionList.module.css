@@ -57,7 +57,7 @@
 }
 
 .lists {
-  max-height: 300px;
+  max-height: 200px;
   overflow-y: auto; /* 세로 스크롤 */
 
   padding: 0.5rem;

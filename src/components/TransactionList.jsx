@@ -25,6 +25,7 @@ const TransactionList = ({ transactions, deleteList }) => {
     <div>
       <h2>내역</h2>
       <div className={css.lists}>
+        {/* tx는 transactions의 줄임말 */}
         {transactions.map(tx => (
           <div
             key={tx.id}

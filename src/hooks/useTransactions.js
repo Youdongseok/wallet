@@ -9,12 +9,12 @@ const useTransactions = () => {
     return stored ? JSON.parse(stored) : []
   })
 
-  // 2. 거래 추가
+  // 2. 추가
   const addList = transaction => {
     setTransactions(prev => [transaction, ...prev])
   }
 
-  // 3. 거래 삭제
+  // 3. 삭제
   const deleteList = id => {
     setTransactions(prev => prev.filter(tx => tx.id !== id))
   }
