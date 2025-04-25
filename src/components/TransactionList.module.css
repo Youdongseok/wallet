@@ -1,0 +1,65 @@
+.list {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+  border-right: 4px solid transparent;
+}
+
+.list.income {
+  border-right-color: green;
+}
+
+.list.expense {
+  border-right-color: red;
+}
+
+.spanIncome {
+  color: green;
+  font-weight: bold;
+}
+
+.spanExpense {
+  color: red;
+  font-weight: bold;
+}
+
+.deleteBtn {
+  background-color: red;
+  color: white;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 4px;
+
+  position: absolute;
+  right: 10px; /* 스크롤을 만들면 왼쪽이 짤리니 오른쪽으로 변경 */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+  user-select: none;
+}
+
+.list:hover .deleteBtn {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lists {
+  max-height: 300px;
+  overflow-y: auto; /* 세로 스크롤 */
+
+  padding: 0.5rem;
+  border-radius: 8px;
+}

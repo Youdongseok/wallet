@@ -1,0 +1,49 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  align-items: center;
+
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+  display: flex;
+  gap: 3rem;
+  width: 100%;
+  min-height: 80px;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.main > * {
+  width: 50%;
+  box-sizing: border-box;
+
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column; /* 내부가 수직 배치일 경우 */
+}
+
+@media (max-width: 700px) {
+  .main {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .main > * {
+    width: 100%;
+  }
+}

@@ -1,0 +1,80 @@
+.countBox {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  font-weight: bold;
+  gap: 1rem;
+
+  min-height: 80px;
+}
+
+.total,
+.plmi {
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid lightblue;
+}
+
+.plmi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+  border: 2px solid lightgray;
+}
+
+.plus {
+  padding-right: 10px;
+  border-right: 2px solid lightgray;
+  width: 50%;
+}
+
+.minus {
+  padding-left: 10px;
+  width: 50%;
+}
+
+.plus > p {
+  color: green;
+}
+
+.minus > p {
+  color: red;
+}
+
+@media (max-width: 700px) {
+  .countBox {
+    flex-direction: column;
+    gap: 0.7rem;
+    min-height: auto;
+  }
+  .total,
+  .plmi {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  .total {
+    justify-content: center;
+  }
+  .plmi {
+    justify-content: space-around;
+    gap: 0.5rem;
+  }
+  .plus,
+  .minus {
+    width: auto;
+    padding: 0 10px;
+    border: none;
+    justify-content: center;
+  }
+}
